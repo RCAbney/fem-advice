@@ -12,7 +12,7 @@
   box-shadow: 1.875rem 3.125rem 5rem rgba(0,0,0,.1)
 }
 
-.advice {
+.advice, .fetching h1 {
   color: hsl(150, 100%, 66%);
   text-transform: uppercase;
   font-size: 0.6875rem;
@@ -29,9 +29,6 @@
 
 .fetching {
   padding: 2rem;
-  color: hsl(150, 100%, 66%);
-  text-transform: uppercase;
-  letter-spacing: 3.45714px;
 }
 
 /* spinner css from https://tobiasahlin.com/spinkit/ */
@@ -82,7 +79,7 @@
     border-radius: 0.9375rem;
     max-width: 33.75rem;
   }
-  .advice {
+  .advice, .fetching {
     font-size: 0.8125rem;
     letter-spacing: 4.08571px;
   }

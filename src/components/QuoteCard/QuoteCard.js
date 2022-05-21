@@ -11,7 +11,7 @@ const QuoteCard = () => {
     getQuote(url, setQuote, setFetching);
   };
   const [quote, setQuote] = useState({});
-  const [fetching, setFetching] = useState(false);
+  const [fetching, setFetching] = useState(true);
 
   useEffect(() => {
     const url = `https://api.adviceslip.com/advice`;
@@ -22,7 +22,7 @@ const QuoteCard = () => {
     <div className={styles.quoteCardWrapper}>
       {fetching ? (
         <div className={styles.fetching}>
-          <p>fetching some good advice</p>
+          <h1>fetching some good advice</h1>
           <div className={styles.spinner}>
             <div className={styles.doubleBounce1}></div>
             <div className={styles.doubleBounce2}></div>
@@ -30,7 +30,7 @@ const QuoteCard = () => {
         </div>
       ) : (
         <div className={styles.quoteWrap}>
-          <p className={styles.advice}>Advice #{quote?.slip?.id}</p>
+          <h1 className={styles.advice}>Advice #{quote?.slip?.id}</h1>
           <p className={styles.quoteText}>"{quote?.slip?.advice}"</p>
           <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
